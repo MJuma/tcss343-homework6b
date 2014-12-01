@@ -127,53 +127,6 @@ public class SimpleGraph {
     public int numEdges() {
         return edgeList.size();
     }
-
-    /**
-     * Code to test the correctness of the SimpleGraph methods.
-     */
-    public static void main(String[] args) {
-        // create graph a----b-----c,
-        //                X     Y
-        // X and Y are objects stored at edges. .
-
-        // All Objects stored will be strings.
-
-        SimpleGraph G = new SimpleGraph();
-        Vertex v, w, a, b, c;
-        Edge e, x, y;
-        v = G.insertVertex(null, "a");
-        a = v;
-        w = G.insertVertex(null, "b");
-        b = w;
-        e = G.insertEdge(v, w, null, "X");
-        x = e;
-        v = G.insertVertex(null, "c");
-        c = v;
-        e = G.insertEdge(w, v, null, "Y");
-        y = e;
-
-        
-        
-        Iterator i;
-
-        System.out.println("Iterating through vertices...");
-        for (i= G.vertices(); i.hasNext(); ) {
-            v = (Vertex) i.next();
-            System.out.println("found vertex " + v.getName());
-        }
-
-        System.out.println("Iterating through adjacency lists...");
-        for (i= G.vertices(); i.hasNext(); ) {
-            v = (Vertex) i.next();
-            System.out.println("Vertex "+v.getName());
-            Iterator j;
-            
-            for (j = G.incidentEdges(v); j.hasNext();) {
-                e = (Edge) j.next();
-                System.out.println("  found edge " + e.getName());
-            }
-        }
-    }
 }
 
 

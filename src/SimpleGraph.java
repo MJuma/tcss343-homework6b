@@ -152,6 +152,8 @@ public class SimpleGraph {
         e = G.insertEdge(w, v, null, "Y");
         y = e;
 
+        
+        
         Iterator i;
 
         System.out.println("Iterating through vertices...");
